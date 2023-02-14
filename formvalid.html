@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <form id="form" action="https://youtube.com" method="get">
+        <label for="name">Name
+        <input
+          type="text"
+          id="name"
+          placeholder="Enter Your Name"
+          onkeyup="validName(this)"
+        />
+      </label>
+        <label for="phone">Phone
+        <input
+          type="text"
+          id="phone"
+          placeholder="Enter Your Phone Number"
+          onkeyup="validPhone(this)"
+        />
+      </label>
+        <div id="error"></div>
+        <button type="submit" id="button">Submit</button>
+    </form>
+    <script defer>
+        const name = document.getElementById("name");
+        const phone = document.getElementById("phone");
+
+        const form = document.getElementById("form");
+
+        form.addEventListener("submit", (e) => {
+            let errorMessage = [];
+            if (name.value.trim() === "" || name.value.trim() == null) {
+                errorMessage.push("Name is Required ! ");
+            } else {
+                if (!name.value.match(/^[a-zA-Z]+ [a-zA-Z]+$/)) {
+                    errorMessage.push("Name Must Have First And Last Name ! ");
+                }
+            }
+            if (phone.value.trim() === "" || phone.value.trim() == null) {
+                errorMessage.push("Phone is Required ! ");
+            } else {
+                if (!phone.value.match(/^977\d{10}$/) &&
+                    !phone.value.match(/^98\d{8}$/) &&
+                    !phone.value.match(/^96\d{8}$/)
+                ) {
+                    errorMessage.push("Invalid Phone");
+                }
+            }
+
+            if (errorMessage.length > 0) {
+                e.preventDefault();
+                error.innerText = errorMessage.join("");
+            }
+        });
+        // for name
+        function validName() {
+            if (name.value.trim() === "" || name.value.trim() == null) {
+                error.innerText = "Name is Required ! ";
+            } else {
+                if (!name.value.match(/^[a-zA-Z]+ [a-zA-Z]+$/)) {
+                    error.innerText = "Name Must Have First And Last Name ! ";
+                } else {
+                    error.innerText = "";
+                }
+            }
+        }
+        // for phone numbers
+        function validPhone() {
+            if (phone.value.trim() === "" || phone.value.trim() == null) {
+                error.innerText = "Phone is Required ! ";
+            } else {
+                if (!phone.value.match(/^977\d{10}$/) &&
+                    !phone.value.match(/^98\d{8}$/) &&
+                    !phone.value.match(/^96\d{8}$/)
+                ) {
+                    error.innerText = "Invalid Phone";
+                } else {
+                    error.innerText = "";
+                }
+            }
+        }
+
+        // for clearing the input fields
+        name.value = "";
+        phone.value = "";
+    </script>
+</body>
+
+</html>

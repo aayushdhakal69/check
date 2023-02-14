@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&family=Sassy+Frass&family=Tiro+Devanagari+Hindi&display=swap"
+        rel="stylesheet">
+    <title>INSTATT</title>
+</head>
+<style type="text/css">
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        background-color: #eee;
+        color: #1c1e21;
+    }
+
+    main {
+        height: 90vh;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .col-form {
+        width: 66%;
+        text-align: center;
+    }
+
+    .col-form .form-container {
+        background-color: #ffffff;
+        border: none;
+        border-radius: 10px;
+        padding: 20px;
+        max-width: 800px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .col-form .form-container input,
+    .col-form .form-container .btn-login {
+        width: 100%;
+        margin: 5px 0px;
+        height: 38px;
+        font-size: 13px;
+    }
+
+    .col-form .form-container input {
+        border: 1px solid #dddfe2;
+        opacity: .8;
+        color: #1d2129;
+        padding: 0 8px;
+        outline: none;
+    }
+
+    .col-form .form-container input:focus {
+        border-color: #767474c7;
+        box-sizing: 0 0 0 2px #e7f3ff;
+    }
+
+    .col-form .form-container .btn-login {
+        background-color: #47afff;
+        border: none;
+        border-radius: 8px;
+        font-size: 14px;
+        padding: 0 16px;
+        color: #ffffff;
+        font-weight: 700;
+        margin-top: 20px;
+    }
+
+    .col-form .form-container a {
+        display: block;
+        color: #1877f2;
+        font-size: 10px;
+        text-decoration: none;
+        padding: 10px 0 20px;
+    }
+
+    /*muni ko css start*/
+    .sub-content {
+        width: 309px;
+        height: 8%;
+        margin: 10px auto;
+        padding: 16px 50px;
+        background-color: #fff;
+        border-radius: 15px;
+    }
+
+    .s-part {
+        text-align: center;
+        word-spacing: 1px;
+        font-weight: normal;
+    }
+
+    .s-part a {
+        text-decoration: none;
+        cursor: pointer;
+        color: #3897f0;
+        word-spacing: 1px;
+        font-weight: normal;
+    }
+
+    /*Muni ko css end*/
+    /*hr css start*/
+    .hr-text {
+        line-height: 1em;
+        position: relative;
+        outline: 0;
+        border: 0;
+        color: black;
+        text-align: center;
+        height: 1.5em;
+        opacity: .9;
+    }
+
+    .hr-text::before {
+        content: '';
+        background: #818078;
+        opacity: .8;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: 100%;
+        height: 1px;
+    }
+
+    .hr-text::after {
+        content: attr(data-content);
+        position: relative;
+        display: inline-block;
+        color: black;
+        padding: 0 .5em;
+        line-height: 1.5em;
+        color: #818078;
+        background-color: #fcfcfa;
+    }
+
+    /*hr css ends*/
+    .h3_facebook {
+        padding: 8px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        opacity: .8;
+        color: rgb(0, 149, 246);
+    }
+
+    @font-face {
+        font-family: myFont;
+        src: url(instafont.otf);
+    }
+
+    .title-insta {
+        font-family: myFont;
+        font-size: 50px;
+        margin-bottom: 2rem;
+    }
+
+    .title-instaa {
+        font-size: 90px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        margin-bottom: 2rem;
+    }
+
+    .bottom-image {
+        cursor: pointer;
+        margin-top: 1rem;
+        width: 300px;
+    }
+</style>
+
+<body>
+    <main>
+        <div id="content">
+            <!-- <div class="col-logo" alt="Logo">
+                <img src="./facebook.svg" alt="" class="mainlogo">
+                <h2>Facebook helps you connect and share with the people in your life</h2>
+            </div> -->
+            <div class="col-form">
+                <div class="form-container">
+                    <h1 class="title-insta">Instagram</h1>
+                    <input type="text" placeholder="Phone number, username, or email">
+                    <input type="password" placeholder="Password">
+                    <button class="btn-login">Log in</button>
+                    <!-- <button class="btn-new">Create new account</button> -->
+                    <hr class="hr-text" data-content="OR">
+                    <h3 class="h3_facebook">Log in with Facebook</h3>
+                    <a href="#">Forgot password?</a>
+                </div>
+            </div>
+        </div>
+        <div class="sub-content">
+            <div class="s-part">
+                Don't have an account?<a href="#"> Sign up</a>
+            </div>
+        </div>
+        <p>Get the app</p>
+        <img src="./insta-bottom.jpg" alt="" class="bottom-image" id="bottom-image" onclick="myFunction()">
+    </main>
+
+    <script>
+        document.getElementById("bottom-image").onclick = function () {
+            location.href = "https://play.google.com/store/apps/details?id=com.instagram.android&referrer=utm_source%3Dinstagramweb%26utm_campaign%3DloginPage%26ig_mid%3DC3DC2CE4-990B-45DE-98A4-9A3F179D374D%26utm_content%3Dlo%26utm_medium%3Dbadge&pli=1";
+        };
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,189 @@
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="resume.css">
+</head>
+<style>
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+
+	body {
+		background-color: #fff;
+		margin-top: 1rem;
+		margin-left: 1rem;
+	}
+
+	.main_container {
+		border: 2px solid black;
+		padding: 10px;
+		border-radius: 30px;
+		width: 50%;
+		max-width: 1000px;
+		min-height: 100px;
+		background-color: #fff;
+		margin: 0px;
+		display: grid;
+		grid-template-columns: 2fr 4fr;
+	}
+
+	.left {
+
+		color: #000000;
+		position: initial;
+		background-color: rgb(255, 255, 255);
+		padding: 20px;
+
+	}
+
+	.main_container:hover {
+		cursor: pointer;
+		transform: scale(0.7) rotate(10deg);
+		transition: ease .4s;
+	}
+
+	.right {
+		color: #fff;
+		position: initial;
+		background-color: rgb(0, 0, 0);
+		padding: 20px;
+
+	}
+
+	.image,
+	.Contact,
+	.Skills,
+	.Language,
+	.Hobbies,
+	.title,
+	.Summary,
+	.Experience,
+	.Education,
+	.project {
+		margin-bottom: 34px;
+	}
+
+	.h2 {
+		background-color: rgb(4, 96, 150);
+	}
+
+	.Education table {
+		color: #fff;
+	}
+
+	.imggg:hover {
+		transform: scale(1.1);
+		transition: 0.4s ease;
+	}
+</style>
+
+<body>
+	<div class="main_container">
+		<div class="left">
+			<div class="image">
+				<img src="./second.jpg" style="width:100px;height:100px;" class="imggg">
+			</div>
+			<div class="Contact">
+				<h2>Contact</h2>
+				<p><b>Email id:</b>aayushbaba@gmail.com</p>
+				<p><b>Mobile no :</b>9800000041</p>
+			</div>
+			<div class="Skills">
+				<h2>Skills</h2>
+				<ul>
+					<li><b>Programming Languages :
+							Python, PHP, C</b></li>
+					<li><b>Frontend : HTML5, CSS3,
+							JavaScript, React</b></li>
+					<li><b>Backend : dJango</b></li>
+				</ul>
+			</div>
+			<div class="Language">
+				<h2>Language</h2>
+				<ul>
+					<li>English</li>
+					<li>Russian</li>
+				</ul>
+			</div>
+			<div class="Hobbies">
+				<h2>Hobbies</h2>
+				<ul>
+					<li>Beatboxing</li>
+					<li>Xarrka Hanne</li>
+				</ul>
+			</div>
+		</div>
+		<div class="right">
+			<div class="name">
+				<h1>Aayush BABA</h1>
+			</div>
+			<div class="title">
+				<p>J pani Developer</p>
+			</div>
+			<div class="Summary">
+				<h2>Summary</h2>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam architecto unde eveniet, fugit,
+					consectetur sit aliquam.
+				</p>
+			</div>
+			<div class="Experience">
+				<h2>Experience</h2>
+				<h3>Student</h3>
+				<p>Jaile ni student</p>
+				<ul>
+					<li>Actively engaged in web creative
+						design and development.</li>
+					<li>Designing project & planning</li>
+				</ul>
+				<p>August 2021 to December 2021</p>
+				<ul>
+					<li>Actively engaged in web creative
+						design and development.</li>
+					<li>Designing project & planning</li>
+					<li>Working on designing</li>
+				</ul>
+			</div>
+			<div class="Education">
+				<h2>Education</h2>
+				<table>
+					<tr>
+						<th>University/college </th>
+						<th>Passing year </th>
+						<th>percentage/cgpa</th>
+					</tr>
+					<tr>
+						<td>xyz</td>
+						<td>2020</td>
+						<td>8.9</td>
+					</tr>
+					<tr>
+						<td>pqr</td>
+						<td>2018</td>
+						<td>89%</td>
+					</tr>
+				</table>
+			</div>
+			<div class="project">
+				<ul>
+					<li>
+						<h2>Project1</h2>
+						<p>This project is based on html
+							& used React</p>
+					</li>
+					<li>
+						<h2>Project2</h2>
+						<p>This project is based on html
+							& used React</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&display=swap" rel="stylesheet">
+
+    <title>Facebook</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Inconsolata', monospace;
+        background-color: #fef2f5;
+        color: #1c1e21;
+    }
+
+    main {
+        height: 90vh;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #content {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        max-width: 1000px;
+    }
+
+    .col-logo {
+        width: 50%;
+        text-align: left;
+    }
+
+    .col-logo img {
+        max-width: 400px;
+    }
+
+    .col-logo h2 {
+        font-size: 25px;
+        margin-left: 44px;
+        font-weight: 400;
+    }
+
+    .col-form {
+        width: 40%;
+        text-align: center;
+    }
+
+    .col-form .form-container {
+        background-color: #ffffff;
+        border: none;
+        border-radius: 10px;
+        padding: 20px;
+        max-width: 400px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .col-form .form-container input,
+    .col-form .form-container .btn-login {
+        width: 100%;
+        margin: 5px 0px;
+        height: 45px;
+        font-size: 16px;
+    }
+
+    .col-form .form-container input {
+        border: 1px solid #dddfe2;
+        color: #1d2129;
+        padding: 0 8px;
+        outline: none;
+    }
+
+    .col-form .form-container input:focus {
+        border-color: #1877f2;
+        box-sizing: 0 0 0 2px #e7f3ff;
+    }
+
+    .col-form .form-container .btn-login {
+        background-color: #1877f2;
+        border: none;
+        border-radius: 6px;
+        font-size: 20px;
+        padding: 0 16px;
+        color: #ffffff;
+        font-weight: 700;
+    }
+
+    .col-form .form-container a {
+        display: block;
+        color: #1877f2;
+        font-size: 14px;
+        text-decoration: none;
+        padding: 10px 0 20px;
+        border-bottom: 1px solid #dadde1;
+    }
+
+    .col-form .form-container a:hover {
+        text-decoration: underline;
+        color: red;
+    }
+
+    .col-form .form-container .btn-new {
+        background-color: #42b72a;
+        border: none;
+        border-radius: 6px;
+        font-size: 17px;
+        padding: 16px 16px;
+        color: #ffffff;
+        font-weight: 700;
+        margin-top: 20px;
+    }
+
+    @media screen and (max-width: 600px) {
+        #content {
+            flex-direction: column;
+        }
+
+        .col-form,
+        .col-logo {
+            width: 100%;
+        }
+
+        .form-container {
+            margin: 0 auto;
+        }
+
+        .col-logo {
+            padding: 24px;
+            text-align: center;
+        }
+
+        .col-logo h2 {
+            font-size: 25px;
+            margin-left: 37px;
+            font-weight: 400;
+        }
+    }
+</style>
+
+<body>
+    <main>
+        <div id="content">
+            <div class="col-logo" alt="Logo">
+                <img src="./facebook.svg" alt="" class="mainlogo">
+                <h2>Facebook helps you connect and share with the people in your life</h2>
+            </div>
+            <div class="col-form">
+                <div class="form-container">
+                    <input type="text" placeholder="Email address or phone">
+                    <input type="password" placeholder="Password">
+                    <button class="btn-login">Login</button>
+                    <a href="#">Forgotten password?</a>
+                    <button class="btn-new">Create new account</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+
+</html>

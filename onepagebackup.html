@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/6846ee7114.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&display=swap" rel="stylesheet">
+    <title>Aayush | BABA</title>
+</head>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+    }
+
+
+    nav {
+        width: 100%;
+        height: 70px;
+        background-color: rgb(65, 96, 255);
+    }
+
+    label.logo {
+        font-size: 34px;
+        color: #fff;
+        margin: 0 80px;
+        line-height: 70px;
+    }
+
+    nav ul {
+        float: right;
+        list-style-type: none;
+    }
+
+    nav ul li {
+        display: inline-block;
+        line-height: 70px;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 18px;
+        padding: 8px 20px;
+    }
+
+    nav ul li a.active,
+    a:hover {
+        border-bottom: 3px solid rgb(195, 31, 50);
+        border-radius: 3px;
+    }
+
+    #checkbtn {
+        float: right;
+        line-height: 70px;
+        margin-right: 10px;
+        font-size: 29px;
+        color: #fff;
+        display: none;
+    }
+
+    #cbox {
+        display: none;
+    }
+
+    #cbox:checked~ul {
+        right: -50%;
+    }
+
+    @media(max-width:900px) {
+        label.logo {
+            font-size: 26px;
+        }
+
+        #checkbtn {
+            display: block;
+        }
+
+        nav ul {
+            width: 100%;
+            height: 100vh;
+            background-color: #fff;
+            /*rgb(65, 96, 255)*/
+            opacity: 0.8;
+            position: fixed;
+            top: 70px;
+            right: -100%;
+            transition: .5s;
+        }
+
+        nav ul li {
+            display: block;
+            margin-right: 12rem;
+            text-align: center;
+        }
+
+        nav ul li a {
+            color: #000;
+            font-size: 32px;
+            line-height: 120px;
+        }
+    }
+
+    @media(max-width:450px) {
+        label.logo {
+            font-size: 22px;
+        }
+    }
+
+    .para {
+        font-family: 'Inconsolata', monospace;
+    }
+
+
+    /*section {
+        margin-top: 2rem;
+        display: block;
+    }
+
+    #hero .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+    }
+
+    img {
+        border-radius: 10px;
+        height: 400px;
+        width: 100%;
+        object-fit: cover;
+    }*/
+    .main-img {
+        border-radius: 20px;
+        max-width: 100%;
+        width: 540px;
+        height: auto;
+    }
+
+    .main-img:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+        transition: ease .4s;
+    }
+
+    .container {
+        text-align: center;
+        font-size: 1.3rem;
+        grid-gap: 0.2rem;
+        color: #fff;
+        background-color: red;
+        display: grid;
+        height: 100vh;
+        width: 100%;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: "main main"
+            "sidebar sidebar2"
+
+    }
+
+    .main {
+        background: #27ae60;
+        grid-area: main;
+        /*margin-right: 12rem;*/
+    }
+
+    .sidebar {
+        background: #2980b9;
+        /*margin-left: 12rem;*/
+        grid-area: sidebar;
+    }
+
+    .sidebar2 {
+        background: #2980b9;
+        /*margin-left: 12rem;*/
+        grid-area: sidebar2;
+    }
+</style>
+
+<body>
+    <nav>
+        <input type="checkbox" id="cbox" name="cbox" value="">
+        <label for="cbox" id="checkbtn"><i class="fa fa-bars"></i></label>
+        <label class="logo">AAYUSH BABA</label>
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <section class="container">
+        <div class="main">Hello</div>
+        <div class="sidebar">Slider</div>
+        <div class="sidebar2">Slider2</div>
+    </section>
+</body>
+
+</html>
+
+<!-- <div class="container">
+        <img src="./second.jpg" alt="" class="myimg">
+    </div> -->
+<!-- <section id="hero">
+        <div class="container">
+            <div class="left">
+                <p class="subheading">I am based in Hetauda, Nepal</p>
+                <h2 class="heading">
+                    <div class="wrapper"><span>Fullstack</span>
+                        <span>Developer</span>
+                    </div>
+                </h2>
+                <p class="desc">Hi, my name is Ashok Pahadi. I create <strong>beautiful</strong>, <strong>fast</strong>
+                    and
+                    <strong>functional</strong> web applications.
+                </p>
+                <div class="button"><a href="#projects" class="primary-btn">View Projects</a>
+                    <a href="#contact" class="primary-btn outline">Hire Me</a>
+                </div>
+            </div>
+            <div class="right"><img src="./second.jpg" alt="ashok pahadi headshot"></div>
+        </div>
+    </section> -->

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .hero{
+        height: 100vh;
+        width: 100%;
+    }
+    .logo, ul{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 40px;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    nav ul li{
+        list-style-type: none;
+        display: inline-block;
+        padding: 10px 20px;
+    }
+    nav ul li a{
+        color: black;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    nav ul li a:hover{
+        color: red;
+    }
+    .hamburger{
+        display:none;
+    }
+
+    @media (max-width: 1280px) {
+        nav ul li{
+            padding: 7px 14px;
+        }
+    }
+</style>
+
+<body>
+    <div class="hero">
+        <nav>
+            <h2 class="logo">LOGO</h2>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Service</a></li>
+                <li><a href="#">Gallary</a></li>
+            </ul>
+            <button type="button">Hire Me</button>
+        </nav>
+    </div>
+</body>
+
+</html>

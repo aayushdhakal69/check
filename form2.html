@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HCC</title>
+</head>
+<body>
+    <style>
+        .gridd_container{
+            text-align: center;
+            font-size:1.3rem ;
+            grid-gap: 0.2rem;
+            color: #fff;
+            display: grid;
+            height: 100vh;
+            grid-template-columns: 1fr 2fr ;
+            grid-template-rows: 1.5fr;
+            grid-template-areas: "sidebar main"
+
+        }
+
+        .mainn{background: #27ae60;
+            grid-area: main;
+            /*margin-right: 12rem;*/
+        }
+        .sidebar{background: #2980b9;
+            /*margin-left: 12rem;*/
+            grid-area: sidebar;
+        }
+        @media only screen and (max-width: 768px){
+            .gridd_container{
+                grid-template-columns: 1fr;
+                grid-template-rows: .3fr 2fr;
+                grid-template-areas:
+                "sidebar"
+                "main"
+            }
+            .mainn{background: #27ae60;
+                grid-area: main;
+                /*margin-right: 12rem;*/
+            }
+            .sidebar{background: #2980b9;
+                /*margin-left: 12rem;*/
+                grid-area: sidebar;
+            }
+        }
+        @media all and (min-width: 800px) {
+            .mainn{background: #27ae60;
+            grid-area: main;
+            margin-right: 12rem;
+        }
+        .sidebar{background: #2980b9;
+            margin-left: 12rem;
+            grid-area: sidebar;
+        }
+        }
+
+    </style>
+    <div class = "gridd_container">
+        <!-- <nav class="navv">Navbar</nav> -->
+        <div class="sidebar">Sidebar</div>
+        <main class="mainn">Main</main>
+    </div>
+</body>
+</html>
