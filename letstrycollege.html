@@ -1,0 +1,548 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Aayush | Baba</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/c57b7eb6b9.js" crossorigin="anonymous"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600;700&display=swap');
+
+    :root {
+        --color-body: #25274d;
+        --color-heading: #AAABB8;
+        --color-base: #464866;
+        --color-base2: #29648a;
+        --color-brand: #2e9cca;
+        --color-brand2: #deff58;
+        --color-hover: #66f6f1;
+        --sidebar-width: 240px;
+        --font-base: "Bai Jamjuree";
+    }
+
+    body {
+        background-color: var(--color-body);
+        color: var(--color-base2);
+        font-family: var(--font-base), sans-serif;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: var(--color-heading);
+        font-weight: 700;
+    }
+
+    a {
+        text-decoration: none;
+        color: var(--color-base2);
+        transition: all 0.4s ease;
+    }
+
+    a:hover {
+        color: var(--color-brand);
+    }
+
+    img {
+        width: 100%;
+    }
+
+    .bg-base {
+        background-color: var(--color-base);
+    }
+
+    .full-height {
+        min-height: 100vh;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-top: 80px;
+        padding-bottom: 80px;
+        border: 2px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .shadow-effect {
+        transition: all 0.5s;
+    }
+
+    .shadow-effect:hover {
+        box-shadow: 6px 6px 0 0px var(--color-brand);
+    }
+
+    .iconbox {
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 32px;
+        /* background-color: var(--color-brand); */
+        color: var(--color-brand2);
+    }
+
+    .text-brand {
+        color: var(--color-brand);
+    }
+
+    .navbar {
+        background-color: var(--color-base);
+    }
+
+    .navbar .nav-link {
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #fff;
+    }
+
+    .navbar .nav-link:hover {
+        color: var(--color-hover);
+    }
+
+    .navbar .nav-link.active {
+        color: var(--color-hover);
+    }
+
+    .navbar-brand img {
+        border-left: 6px solid var(--color-hover);
+        border-bottom: 6px solid var(--color-hover);
+    }
+
+    /* Content Wrapper css */
+
+
+    .btn {
+        padding: 12px 28px;
+        font-weight: 700;
+    }
+
+    .btn-brand {
+        background-color: var(--color-hover);
+        border-color: #2e9cca;
+    }
+
+    .btn-brand:hover,
+    .btn-brand:focus {
+        background-color: #66f6f1;
+        color: hotpink;
+    }
+
+    @media (min-width: 992px) {
+        .navbar {
+            min-height: 100vh;
+            width: var(--sidebar-width);
+            background: linear-gradient(rgba(41, 99, 138, 0.7), rgba(41, 99, 138, 0.7)), url(/static/navbar_img.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+
+        #content-wrapper {
+            padding-left: var(--sidebar-width);
+        }
+    }
+
+    .service p,
+    a,
+    .iconbox {
+        color: #fff;
+    }
+
+    /* work card css */
+
+    .card-custom .card-custom-image {
+        overflow: hidden;
+        height: 350px;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .card-custom .card-custom-image img {
+        object-fit: cover;
+        transition: all 0.4s ease;
+    }
+
+    .card-custom .card-custom-image img:hover {
+        transform: scale(1.1);
+    }
+
+    .card-custom-content p {
+        color: #fff;
+    }
+</style>
+
+<body data-bs-spy="scroll" data-bs-target=".navbar">
+    <!-- NAVBAR STARTS -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container flex-lg-column">
+            <a class="navbar-brand mx-lg-auto mb-lg-4" href="#">
+                <span class="h3 fw-bold d-block d-lg-none">BABA AAYUSH</span>
+                <img src="{% static 'baba.jpeg' %}" alt="Aayush Dhakal" class="d-none d-lg-block rounded-4">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto flex-lg-column text-lg-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#work">Work</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#reviews">Reviews</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#blog">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- NAVBAR ENDS -->
+
+    <!-- MAIN CONTENT STARTS -->
+    <div id="content-wrapper">
+        <!-- HOME STARTS -->
+        <section id="home" class="full-height px-lg-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <h1 class="display-4 fw-bold" data-aos="fade-up">I'am a <span class="text-brand">Baba
+                                Xarrkeshowr</span>
+                            Database Apaharankari
+                        </h1>
+                        <p class="lead mt-2 mb-4" data-aos="fade-up" data-aos-delay="300">I am Aayush Dhakal and I
+                            consider myself a
+                            techology geek.
+                            You can Hire me for Projects.
+                        </p>
+                        <div data-aos="fade-up" data-aos-delay="600">
+                            <a href="#work" class="btn btn-brand">Explore My Work</a>
+                            <a href="#contact" class="btn btn-brand">Hire Me</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- HOME ENDS -->
+        <!-- SERVICES STARTS -->
+        <section id="services" class="full-height px-lg-5">
+            <div class="container">
+
+                <div class="row pb-4" data-aos="fade-up">
+                    <div class="col-lg-8">
+                        <h6 class="text-brand">SERVICES</h6>
+                        <h1>Services that I Provide</h1>
+                    </div>
+                </div>
+
+                <div class="row gy-4">
+                    <div class="col-md-4" data-aos="fade-up">
+                        <div class="service p-3 bg-base rounded-4 shadow-effect">
+                            <div class="iconbox">
+                                <i class="fa-sharp fa-solid fa-globe fa-fade"></i>
+                            </div>
+                            <h5 class="mt-4 mb-2">Web Developing</h5>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elitesse.</p>
+                            <a href="" class="link-custom">Read More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                        <div class="service p-3 bg-base rounded-4 shadow-effect">
+                            <div class="iconbox">
+                                <i class="fa-sharp fa-solid fa-globe fa-fade"></i>
+                            </div>
+                            <h5 class="mt-4 mb-2">Web Developing</h5>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elitesse.</p>
+                            <a href="" class="link-custom">Read More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="600">
+                        <div class="service p-3 bg-base rounded-4 shadow-effect">
+                            <div class="iconbox">
+                                <i class="fa-sharp fa-solid fa-globe fa-fade"></i>
+                            </div>
+                            <h5 class="mt-4 mb-2">Web Developing</h5>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elitesse.</p>
+                            <a href="" class="link-custom">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- SERVICES ENDS -->
+        <!-- WORK SECTION STARTS -->
+        <section id="work" class="full-height px-lg-5">
+            <div class="container">
+                <div class="row pb-4" data-aos="fade-up">
+                    <div class="col-lg-8">
+                        <h6 class="text-brand">Works</h6>
+                        <h1>My Projects</h1>
+                    </div>
+                </div>
+                <div class="row gy-4">
+                    <div class="col-md-6">
+                        <div class="card-custom rounded-4 bg-base shadow-effect">
+                            <div class="card-custom-image rounded-4">
+                                <img src="{% static 'safeconsultancy.png' %}" alt="aayush_projects" class="rounded-4">\
+                            </div>
+                            <div class="card-custom-content px-4 pb-4   ">
+                                <h4>Safe Consultancy</h4>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates id nihil magni
+                                    eaque illo?</p>
+                                <a href="https://www.safeconsultancy.com.np" class="link-custom"
+                                    target="_blank">Jump:</a>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card-custom rounded-4 bg-base shadow-effect">
+                            <div class="card-custom-image rounded-4">
+                                <img src="{% static 'safeconsultancy.png' %}" alt="aayush_projects" class="rounded-4">\
+                            </div>
+                            <div class="card-custom-content px-4 pb-4">
+                                <h4>Khetalo.com</h4>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates id nihil magni
+                                    eaque illo?</p>
+                                <a href="#" class="link-custom" target="_blank">Jump:</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card-custom rounded-4 bg-base shadow-effect">
+                            <div class="card-custom-image rounded-4">
+                                <img src="{% static 'safeconsultancy.png' %}" alt="aayush_projects" class="rounded-4">\
+                            </div>
+                            <div class="card-custom-content px-4 pb-4">
+                                <h4>Khetalo.com</h4>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates id nihil magni
+                                    eaque illo?</p>
+                                <a href="#" class="link-custom" target="_blank">Jump:</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- WORK SECTION ENDS -->
+        <!-- ABOUT SECTION STARTS -->
+        <section id="about" class="full-height px-lg-5">
+            <div class="container">
+                <div class="row-pb-4" data-aos="fade-up">
+                    <div class="col-lg-8">
+                        <h6 class="text-brand">About</h6>
+                        <h1>About Me</h1>
+                    </div>
+                </div>
+
+                <div class="row gy-5">
+                    <div class="col-lg-6">
+                        <h4 data-aos="fade-up" data-aos-delay="300">Education</h4>
+                        <div class="row gy-4">
+                            <div class="col-12">
+                                <div class="bg-base p-4 rounded-4 shadow-effect">
+                                    <h5>SEE from Adhunik</h5>
+                                    <p class="text-brand">Adhunik Rastriya M Bidyalaya (2073-2075)</p>
+                                    <p class="text-brand">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Architecto tenetur
+                                        libero laboriosam corporis placeat provident.</p>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="bg-base p-4 rounded-4 shadow-effect">
+                                    <h5>+2 in Management</h5>
+                                    <p class="text-brand">Makawanpur Multiple Campus (2076-2078)</p>
+                                    <p class="text-brand">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Architecto tenetur
+                                        libero laboriosam corporis placeat provident.</p>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="bg-base p-4 rounded-4 shadow-effect">
+                                    <h5>Bachelor in Computer Application</h5>
+                                    <p class="text-brand">Hetauta City College (2078-Present)</p>
+                                    <p class="text-brand">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Architecto tenetur
+                                        libero laboriosam corporis placeat provident.</p>  
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Right side column -->
+                    <div class="col-lg-6">
+                        <h4 data-aos="fade-up" data-aos-delay="300">Experience</h4>
+                        <div class="row gy-4">
+                            <div class="col-12">
+                                <div class="bg-base p-4 rounded-4 shadow-effect">
+                                    <h5>Website Development</h5>
+                                    <p class="text-brand">Experience of 2 years</p>
+                                    <p class="text-brand">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Architecto tenetur
+                                        libero laboriosam corporis placeat provident.</p>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="bg-base p-4 rounded-4 shadow-effect">
+                                    <h5>Basic AI Engineering</h5>
+                                    <p class="text-brand">Experience of 4.5 years</p>
+                                    <p class="text-brand">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Architecto tenetur
+                                        libero laboriosam corporis placeat provident.</p>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="bg-base p-4 rounded-4 shadow-effect">
+                                    <h5>Android Application Development</h5>
+                                    <p class="text-brand">Experience of 3 months</p>
+                                    <p class="text-brand">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Architecto tenetur
+                                        libero laboriosam corporis placeat provident.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ABOUT SECTION ENDS -->
+        <!-- REVIEW SECTION STARTS -->
+        <section id="reviews" class="full-height px-lg-5">
+            <div class="container">
+                <div class="row-pb-4" data-aos="fade-up">
+                    <div class="col-lg-8">
+                        <h6 class="text-brand">Reviews</h6>
+                        <h1>All Reviews</h1>
+                    </div>
+                </div>
+
+                <div class="row gy-5">
+                    <div class="col-md-4" data-aos="fade-up">
+                        <div class="review shadow-effect bg-base p-4 rounded-4">
+                            <div class="text-brand h5">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <p class="my-3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi
+                                    quibusdam aperiam,
+                                    eum eius enim unde earum dolores cum iure tempora?</p>
+                                <div class="person">
+                                    <h5 class="mb-0">Dipendra Shrestha</h5>
+                                    <p class="mb-0">Twitter</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                        <div class="review shadow-effect bg-base p-4 rounded-4">
+                            <div class="text-brand h5">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <p class="my-3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi
+                                    quibusdam aperiam,
+                                    eum eius enim unde earum dolores cum iure tempora?</p>
+                                <div class="person">
+                                    <h5 class="mb-0">Dipendra Shrestha</h5>
+                                    <p class="mb-0">Twitter</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="600">
+                        <div class="review shadow-effect bg-base p-4 rounded-4">
+                            <div class="text-brand h5">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <p class="my-3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi
+                                    quibusdam aperiam,
+                                    eum eius enim unde earum dolores cum iure tempora?</p>
+                                <div class="person">
+                                    <h5 class="mb-0">Dipendra Shrestha</h5>
+                                    <p class="mb-0">Twitter</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- REVIEW SECTION ENDS -->
+
+        <!-- Blog SECTION STARTS -->
+        <section id="reviews" class="full-height px-lg-5">
+            <div class="container">
+                <div class="row-pb-4" data-aos="fade-up">
+                    <div class="col-lg-8">
+                        <h6 class="text-brand">Blogs</h6>
+                        <h1>See Post here</h1>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card-custom rounded-4 bg-base shadow-effect">
+                            <div class="card-custom-image rounded-4">
+                                <img src="{% static 'safeconsultancy.png' %}" alt="aayush_projects" class="rounded-4">\
+                            </div>
+                            <div class="card-custom-content px-4 pb-4">
+                                <h4>Safe Consultancy</h4>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates id nihil magni
+                                    eaque illo?</p>
+                                <a href="https://www.safeconsultancy.com.np" class="link-custom"
+                                    target="_blank">Jump:</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Blog SECTION ENDS -->
+    </div>
+    <!-- MAIN CONTENT ENDS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init(
+            {
+                duration: 1000
+            }
+        );
+    </script>
+
+</body>
+
+</html>

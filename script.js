@@ -13,6 +13,7 @@
 //     console.log('⛔️ string does NOT contain special characters');
 //   } 
 
-const regixx = /[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
-let y = regixx.test("AAysuh");
-console.log(y);
+// let a = prompt("Enter a string: ");
+// if ((isNaN.a)>4) {
+// 	alert("1");
+// }
